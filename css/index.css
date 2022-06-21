@@ -1,9 +1,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,400;1,600;1,800;1,900&display=swap');
 
+/* estos son los colores */
 :root {
 	--coloruno: #222222;
 	--colordos: #f0a83e;
 	--colortres: #e5e5e5;
 	--colorcuatro: #3c2313;
 	--colorcinco: #ffff;
+}
+
+/* esto se usa para darle a todo lo que este en el body */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Poppins', sans-serif;
+}
+
+.header__nav .nav__ofertas {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 40px;
+	background-color: var(--coloruno);
+	color: var(--colorcinco);
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.ofertas__indicaciones {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.indicadores a {
+	color: var(--colorcinco);
+	text-align: center;
+	display: flex;
+	align-items: end;
+}
+
+.indicadores a img {
+	width: 16px;
+	height: 15px;
+}
+
+.nav__categorias {
+	background-color: var(--colordos);
+	color: var(--colorcinco);
+	padding: 30px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.categorias__logo a {
+	color: #000;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	font-size: 25px;
+	font-weight: 800;
+}
+
+.categorias__logo a img {
+	width: 20px;
+}
+
+.categorias__logo a span {
+	color: var(--colorcinco);
+}
+
+.categorias__buscador ul {
+	display: flex;
+	gap: 30px;
+}
+
+.categorias__buscador ul a {
+	color: var(--colorcinco);
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.hamburguer__menu {
+	display: none;
+}
+
+@media screen and (max-width: 900px) {
+	.categorias__buscador {
+		display: none;
+	}
+
+	.hamburguer__menu {
+		display: block;
+		padding: 0px 30px;
+	}
 }
